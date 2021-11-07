@@ -1,0 +1,157 @@
+$c-white:  #F1EFEF;
+$c-black:  #2B2B2B;
+$-c-black-darker: #222222;
+
+$f-titles:  'Trykker', serif;
+$f-text: 'Roboto', 'sans-serif';
+
+$padding:2em;
+
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+
+@import 'header.scss';
+@import 'contact-section.scss';
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+*,
+*:before,
+*:after  { box-sizing: inherit; }
+
+h1 { 
+    color: $c-white;
+    font-family: $f-titles;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0.5em 0 3em;
+    text-shadow: 1px 1px 1px #333;
+}
+
+h2{
+    font-family: $f-titles;
+    font-size: 3em;
+}
+
+p{
+    font-size: 1em;
+    font-family: $f-text;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $c-black;
+}
+
+#main{
+    background-color:$c-white;
+    color: $c-black;
+    padding: 4em 2em;
+    height: auto;
+
+    h1{
+        color: $c-black;
+        text-align: center;
+        margin: 1em 0;
+        font-size: 3em;
+    }
+}
+
+.grid__categorias-home{
+    display: grid;
+    grid-template-columns: auto 60%;
+
+    .grid__categorias-pequeña{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0px;
+        
+    }
+    .categoria{
+        height: 50vh;
+        overflow: hidden;
+        background-size: contain;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            text-align: center;
+        }
+        
+    }
+
+    .categoria-grande{
+        background-image: url(/pics/ilustracion/shakti.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .categoria:hover{
+        opacity: .5;
+        
+    }
+
+    .cat_design{
+        background-image: url(/pics/grafico/bohemianrapsody.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .cat_web{
+        background-image: url(/pics/web/morpheus1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media (max-width: 800px){
+    .grid__categorias-home{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.btn{
+    font-family: $f-text;
+    font-weight: 600;
+    padding: 1em;
+    border: 1px solid $c-white;
+    border-radius: 2px;
+}
+.btn:hover{
+    border: 1px solid white;
+    background-color: $c-white;
+    color: $c-black;
+}
+
+.btn-enviar{
+    border: 1px solid white;
+    background-color: $c-black;
+    color: $c-white;
+
+}
+#footer{
+    background-color: $-c-black-darker;
+    color: $c-white;
+    padding: 3em;
+    font-size: 0.7em;
+    margin: auto;
+}
